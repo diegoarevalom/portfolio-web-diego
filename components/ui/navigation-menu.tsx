@@ -25,7 +25,7 @@ function navigation_menu({ activeSection, menuOpen, setMenuOpen }: NavigationMen
       <div className='max-w-5xl mx-auto px-4'>
         <div className='flex justify-between'>
           <a href="#home" className='text-2xl font-mono text-white hover:text-blue-500 transition duration-300 ease-in-out'>
-            LOGO
+            <img src="images/logo.png" alt="logo" className='w-12 h-12' />
           </a>
           <div className='w-7 h-5 relative cursor-pointer z-40 md:hidden' onClick={() => setMenuOpen(!menuOpen)}>
             &#9776;

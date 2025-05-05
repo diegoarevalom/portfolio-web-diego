@@ -32,6 +32,10 @@ function contact({ ref }: ContactProps) {
               WebkitTextFillColor: 'transparent',
               color: 'transparent',
             }}>Contact to me!</h2>
+          <p className='text-gray-400 text-lg max-w-lg mb-6'>
+            Feel free to reach out to me for any collaboration, project inquiries, or just to say hi!
+            I'm always open to discussing new ideas and opportunities to create something amazing together.
+          </p>
           <Tabs defaultValue="account" className="w-[400px]">
             <TabsContent value="account">
               <Card className='bg-gray-300'>
@@ -81,14 +85,15 @@ function contact({ ref }: ContactProps) {
             </TabsContent>
           </Tabs>
         </div>
-        <div className='flex flex-col justify-baseline'>
+        <div className='flex flex-col-3 w-full gap-6 px-8 '>
           <div>
-            <img src="/instagram.svg" alt="instagram logo " className='h-10 w-10 transform hover:scale-90' />
-            <h3>@diegoarevalom</h3>
+            <img src="/instagram.svg" alt="instagram logo " className='h-10 w-10 transform hover:scale-90' onClick={() => window.location.href = 'https://instagram.com/diegoarevalom'} />
           </div>
           <div>
-            <img src="/linkedin.svg" alt="instagram logo " className='h-10 w-10 transform hover:scale-90' />
-            <h3>diegoarevalom</h3>
+            <img src="/linkedin.svg" alt="linkedin logo " className='h-10 w-10 transform hover:scale-90' onClick={() => window.location.href = 'https://www.linkedin.com/in/diegoarévalo/'} />
+          </div>
+          <div>
+            <img src="/github.svg" alt="github logo " className='h-10 w-10 transform hover:scale-90' onClick={() => window.location.href = 'https://github.com/diegoarevalom'} />
           </div>
         </div>
 

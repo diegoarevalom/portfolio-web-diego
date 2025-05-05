@@ -28,7 +28,9 @@ function About({ ref }: AboutProps) {
               WebkitTextFillColor: 'transparent',
               color: 'transparent',
             }}>About</h2>
-          <p className='text-gray-400 text-lg max-w-lg mb-6'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam, autem. Quae repellat dolore blanditiis quas. Ipsum quo nam, distinctio deleniti corrupti vel enim, similique reprehenderit praesentium magnam temporibus doloribus fuga.</p>
+          <p className='text-gray-400 text-lg max-w-lg mb-6'> I am a passionate Frontend Developer with over 2 years of experience building modern and responsive web applications.
+            Skilled in technologies like React, Next.js, and Tailwind CSS, I enjoy solving complex problems and continuously learning
+            new tools and techniques. My goal is to contribute to innovative projects that create meaningful user experiences.</p>
         </div>
         <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 text-center'>
           <div className='bg-yellow-200 p-4 shadow-md text-xl'>

@@ -33,8 +33,10 @@ function projects({ ref }: ProjectsProps) {
               key={project.id}
               title={project.title}
               description={project.description}
-              imgUrl={project.image}
+              image={project.image}
               tag={project.tag[0]}
+              githubUrl={project.gitUrl || ''}
+              netlifyUrl={project.netlifyUrl || ''}
             />
           ))}
         </div>

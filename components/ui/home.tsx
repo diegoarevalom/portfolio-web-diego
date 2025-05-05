@@ -40,7 +40,7 @@ function home({ ref }: HomeProps) {
             <button className='px-6 py-3 rounded-full bg-gradient-to-br from-yellow-200 to-green-300 bg-white text-black transition transform hover:translate-y-1' onClick={() => window.location.href = '#projects'}>
               View Projects
             </button>
-            <button className='px-1 rounded-full bg-transparent bg-gradient-to-br from-yellow-200 to-green-300 text-white transition transform hover:translate-y-1'>
+            <button className='px-1 rounded-full bg-transparent bg-gradient-to-br from-yellow-200 to-green-300 text-white transition transform hover:translate-y-1' onClick={() => window.location.href = 'https://drive.google.com/file/d/18ZAh2fOxk0CdjQadLehi4huUfAV7w6Ds/view?usp=sharing'}>
               <span className='block bg-[#121212] rounded-full px-5 py-2'>Download CV</span>
             </button>
           </div>
