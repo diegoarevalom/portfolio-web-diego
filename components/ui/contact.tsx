@@ -49,11 +49,20 @@ function Contact({ ref }: ContactProps) {
                 <CardContent className="space-y-2">
                   <div className="space-y-1">
                     <Label htmlFor="name">Name</Label>
-                    <Input id="name" defaultValue="Pedro Duarte" />
+                    <Input id="name" defaultValue="Pedro Duarte" className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500' />
                   </div>
                   <div className="space-y-1">
-                    <Label htmlFor="username">Username</Label>
-                    <Input id="username" defaultValue="@peduarte" />
+                    <Label htmlFor="username">Mail</Label>
+                    <Input id="username" defaultValue="@peduarte.cl" className='w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500' />
+                  </div>
+                  <div className='space-y-1'>
+                    <label htmlFor="message">Message</label>
+                    <textarea
+                      id='message'
+                      rows={4}
+                      className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+                      placeholder="Write your message here...">
+                    </textarea>
                   </div>
                 </CardContent>
                 <CardFooter>
@@ -86,18 +95,45 @@ function Contact({ ref }: ContactProps) {
             </TabsContent>
           </Tabs>
         </div>
-        <div className='flex flex-col-3 w-full gap-6 px-8 '>
-          <div>
-            <Image src="/instagram.svg" alt="instagram logo " width='10' height='10' className='h-10 w-10 transform hover:scale-90' onClick={() => window.location.href = 'https://instagram.com/diegoarevalom'} />
+        <div className='flex flex-col w-full items-center gap-6 px-8'>
+          {/* Redes sociales */}
+          <div className='flex gap-6'>
+            <div>
+              <Image
+                src="/instagram.svg"
+                alt="instagram logo"
+                width={40}
+                height={40}
+                className='h-10 w-10 transform hover:scale-90'
+                onClick={() => window.location.href = 'https://instagram.com/diegoarevalom'}
+              />
+            </div>
+            <div>
+              <Image
+                src="/linkedin.svg"
+                alt="linkedin logo"
+                width={40}
+                height={40}
+                className='h-10 w-10 transform hover:scale-90'
+                onClick={() => window.location.href = 'https://www.linkedin.com/in/diegoarévalo/'}
+              />
+            </div>
+            <div>
+              <Image
+                src="/github.svg"
+                alt="github logo"
+                width={40}
+                height={40}
+                className='h-10 w-10 transform hover:scale-90'
+                onClick={() => window.location.href = 'https://github.com/diegoarevalom'}
+              />
+            </div>
           </div>
-          <div>
-            <Image src="/linkedin.svg" alt="linkedin logo " width='10' height='10' className='h-10 w-10 transform hover:scale-90' onClick={() => window.location.href = 'https://www.linkedin.com/in/diegoarévalo/'} />
-          </div>
-          <div>
-            <Image src="/github.svg" alt="github logo " width='10' height='10' className='h-10 w-10 transform hover:scale-90' onClick={() => window.location.href = 'https://github.com/diegoarevalom'} />
+
+          <div className='items-center'>
+            <span className='text-gray-400 text-lg'>diego.arevalo@inacapmail.cl</span>
           </div>
         </div>
-
       </div>
     </section >
   )

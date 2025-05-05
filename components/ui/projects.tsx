@@ -32,7 +32,6 @@ function Projects({ ref }: ProjectsProps) {
             <ProjectCard
               key={project.id}
               title={project.title}
-              description={project.description}
               image={project.image}
               tag={project.tag[0]}
               githubUrl={project.gitUrl || ''}

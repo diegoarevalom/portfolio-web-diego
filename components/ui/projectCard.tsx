@@ -4,13 +4,12 @@ import React from 'react'
 interface ProjectCardProps {
   image: string;
   title: string;
-  description: string;
   tag: string;
   githubUrl: string;
   netlifyUrl: string;
 }
 
-function projectCard({ image, title, description, tag, githubUrl, netlifyUrl }: ProjectCardProps) {
+function projectCard({ image, title, tag, githubUrl, netlifyUrl }: ProjectCardProps) {
   return (
     <div className='relative group'>
       <div
@@ -24,7 +23,6 @@ function projectCard({ image, title, description, tag, githubUrl, netlifyUrl }: 
       </div>
       <div className='text-white'>
         <h5 className='text-white text-lg'>{title}</h5>
-        <p className='text-gray-400 text-lg'>{description}</p>
         <p className='text-lg md:text-lg font-bold mb-6 bg-gradient-to-r leading-right'
             style={{
               backgroundImage: 'linear-gradient(to right, #fef08a, #86efac)',
