@@ -1,6 +1,7 @@
 'use client'
 
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from '@radix-ui/react-navigation-menu'
+import Image from 'next/image';
 import React, { useEffect } from 'react'
 
 interface NavigationMenuProps {
@@ -11,7 +12,7 @@ interface NavigationMenuProps {
 
 
 
-function navigation_menu({ activeSection, menuOpen, setMenuOpen }: NavigationMenuProps) {
+function Navigation_menu({ activeSection, menuOpen, setMenuOpen }: NavigationMenuProps) {
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : 'auto';
   }, [menuOpen]);
@@ -25,7 +26,7 @@ function navigation_menu({ activeSection, menuOpen, setMenuOpen }: NavigationMen
       <div className='max-w-5xl mx-auto px-4'>
         <div className='flex justify-between'>
           <a href="#home" className='text-2xl font-mono text-white hover:text-blue-500 transition duration-300 ease-in-out'>
-            <img src="images/logo.png" alt="logo" className='w-12 h-12' />
+            <Image width={12} height={12} src="/images/logo.png" alt="logo" className='w-12 h-12' />
           </a>
           <div className='w-7 h-5 relative cursor-pointer z-40 md:hidden' onClick={() => setMenuOpen(!menuOpen)}>
             &#9776;
@@ -90,4 +91,4 @@ function navigation_menu({ activeSection, menuOpen, setMenuOpen }: NavigationMen
   )
 }
 
-export default navigation_menu
+export default Navigation_menu

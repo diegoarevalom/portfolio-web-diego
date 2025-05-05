@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Label } from './label';
 import { Input } from './input';
 import { Button } from './button';
+import Image from 'next/image';
 
 
 interface ContactProps {
@@ -12,8 +13,8 @@ interface ContactProps {
 }
 
 
-function contact({ ref }: ContactProps) {
-  const [_, isVisible] = intersectionObserver({ threshold: 0.5 });
+function Contact({ ref }: ContactProps) {
+  const [, isVisible] = intersectionObserver({ threshold: 0.5 });
   useEffect(() => {
     if (isVisible) {
       console.log('Contact section is visible');
@@ -34,7 +35,7 @@ function contact({ ref }: ContactProps) {
             }}>Contact to me!</h2>
           <p className='text-gray-400 text-lg max-w-lg mb-6'>
             Feel free to reach out to me for any collaboration, project inquiries, or just to say hi!
-            I'm always open to discussing new ideas and opportunities to create something amazing together.
+            I&apos;m always open to discussing new ideas and opportunities to create something amazing together.
           </p>
           <Tabs defaultValue="account" className="w-[400px]">
             <TabsContent value="account">
@@ -42,7 +43,7 @@ function contact({ ref }: ContactProps) {
                 <CardHeader>
                   <CardTitle>Account</CardTitle>
                   <CardDescription>
-                    Make changes to your account here. Click save when you're done.
+                    Make changes to your account here. Click save when you&apos;re done.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-2">
@@ -65,7 +66,7 @@ function contact({ ref }: ContactProps) {
                 <CardHeader>
                   <CardTitle>Password</CardTitle>
                   <CardDescription>
-                    Change your password here. After saving, you'll be logged out.
+                    Change your password here. After saving, you&apos;ll be logged out.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-2">
@@ -87,13 +88,13 @@ function contact({ ref }: ContactProps) {
         </div>
         <div className='flex flex-col-3 w-full gap-6 px-8 '>
           <div>
-            <img src="/instagram.svg" alt="instagram logo " className='h-10 w-10 transform hover:scale-90' onClick={() => window.location.href = 'https://instagram.com/diegoarevalom'} />
+            <Image src="/instagram.svg" alt="instagram logo " width='10' height='10' className='h-10 w-10 transform hover:scale-90' onClick={() => window.location.href = 'https://instagram.com/diegoarevalom'} />
           </div>
           <div>
-            <img src="/linkedin.svg" alt="linkedin logo " className='h-10 w-10 transform hover:scale-90' onClick={() => window.location.href = 'https://www.linkedin.com/in/diegoarévalo/'} />
+            <Image src="/linkedin.svg" alt="linkedin logo " width='10' height='10' className='h-10 w-10 transform hover:scale-90' onClick={() => window.location.href = 'https://www.linkedin.com/in/diegoarévalo/'} />
           </div>
           <div>
-            <img src="/github.svg" alt="github logo " className='h-10 w-10 transform hover:scale-90' onClick={() => window.location.href = 'https://github.com/diegoarevalom'} />
+            <Image src="/github.svg" alt="github logo " width='10' height='10' className='h-10 w-10 transform hover:scale-90' onClick={() => window.location.href = 'https://github.com/diegoarevalom'} />
           </div>
         </div>
 
@@ -102,4 +103,4 @@ function contact({ ref }: ContactProps) {
   )
 }
 
-export default contact
+export default Contact

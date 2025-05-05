@@ -8,7 +8,7 @@ interface AboutProps {
 
 
 function About({ ref }: AboutProps) {
-  const [_, isVisible] = intersectionObserver({ threshold: 0.5 });
+  const [, isVisible] = intersectionObserver({ threshold: 0.5 });
   useEffect(() => {
     if (isVisible) {
       console.log('About section is visible');

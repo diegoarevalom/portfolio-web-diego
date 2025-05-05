@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 
 interface ProjectCardProps {
@@ -42,7 +43,7 @@ function projectCard({ image, title, description, tag, githubUrl, netlifyUrl }: 
           rel="noopener noreferrer"
           className="flex items-center justify-center w-12 h-12 mb-4 bg-white text-white rounded-full hover:bg-white transition"
         >
-          <img src="/code.svg" alt="GitHub" className='w-6 h-6' />
+          <Image src="/code.svg" width={6} height={6} alt="GitHub" className='w-6 h-6' />
         </a>
         <a
               href={netlifyUrl}
@@ -50,7 +51,7 @@ function projectCard({ image, title, description, tag, githubUrl, netlifyUrl }: 
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 mb-4 bg-white text-white rounded-full hover:bg-white transition"
         >
-          <img src="/web.svg" alt="GitHub" className='w-6 h-6' />
+          <Image width={6} height={6} src="/web.svg" alt="GitHub" className='w-6 h-6' />
 
         </a>
       </div>

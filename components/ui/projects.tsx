@@ -7,8 +7,8 @@ interface ProjectsProps {
   ref: React.RefObject<HTMLElement | null>;
 }
 
-function projects({ ref }: ProjectsProps) {
-  const [_, isVisible] = intersectionObserver({ threshold: 0.5 });
+function Projects({ ref }: ProjectsProps) {
+  const [, isVisible] = intersectionObserver({ threshold: 0.5 });
   useEffect(() => {
     if (isVisible) {
       console.log('Projects section is visible');
@@ -45,4 +45,4 @@ function projects({ ref }: ProjectsProps) {
   )
 }
 
-export default projects
+export default Projects

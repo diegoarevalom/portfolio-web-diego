@@ -8,8 +8,8 @@ interface HomeProps {
   ref: React.RefObject<HTMLElement | null>;
 }
 
-function home({ ref }: HomeProps) {
-  const [_, isVisible] = intersectionObserver({ threshold: 0.5 });
+function Home({ ref }: HomeProps) {
+  const [, isVisible] = intersectionObserver({ threshold: 0.5 });
   useEffect(() => {
     if (isVisible) {
       console.log('Home section is visible');
@@ -31,7 +31,7 @@ function home({ ref }: HomeProps) {
               color: 'transparent',
             }}
           >
-            Hi, I'm Diego, a Front End Developer
+            Hi, I&apos;m Diego, a Front End Developer
           </TypingAnimation>
           <p className='text-gray-400 text-lg max-w-lg mb-6'>
             Computer Engineer specializing in front-end development. Proficient in solving complex problems, with rapid adaptation to new technologies, quick learning, and excellent collaboration skills. Motivated by innovation and continuous improvement.
@@ -63,4 +63,4 @@ function home({ ref }: HomeProps) {
   )
 }
 
-export default home
+export default Home
