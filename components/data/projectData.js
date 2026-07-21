@@ -18,6 +18,7 @@ const projectData = [
         stack: ["Next.js", "TypeScript", "Supabase", "Claude API"],
         categories: ["IA", "Fullstack"],
         gitUrl: "https://github.com/diegoarevalom/carta-presentacion-ia",
+        demoUrl: "https://carta-presentacion-ia.vercel.app",
         isPrivate: false,
     },
     {
